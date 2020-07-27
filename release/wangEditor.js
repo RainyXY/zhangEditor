@@ -718,8 +718,67 @@
     },
 
     // 是否上传七牛云，默认为 false
-    qiniu: false
+    qiniu: false,
 
+    // 是否显示添加网络视频的 tab
+    showLinkVideo: true,
+
+    // 插入网络视频的回调
+    linkVideoCallback: function linkVideoCallback(url) {
+      // console.log(url)  // url 即插入视频的地址
+    },
+
+    // 默认上传视频 max size: 512M
+    uploadVideoMaxSize: 512 * 1024 * 1024,
+
+    // 配置一次最多上传几个视频
+    uploadVideoMaxLength: 5,
+
+    // 上传视频的自定义参数
+    uploadVideoParams: {
+      // token: 'abcdef12345'
+    },
+
+    // 上传视频的自定义header
+    uploadVideoHeaders: {
+      // 'Accept': 'text/x-json'
+    },
+
+    // 自定义上传视频超时时间 30分钟
+    uploadVideoTimeout: 30 * 60 * 1000,
+
+    // 上传视频 hook 
+    uploadVideoHooks: {
+      // customInsert: function (insertLinkVideo, result, editor) {
+      //     console.log('customInsert')
+      //     // 视频上传并返回结果，自定义插入视频的事件，而不是编辑器自动插入视频
+      //     const data = result.data1 || []
+      //     data.forEach(link => {
+      //         insertLinkVideo(link)
+      //     })
+      // },
+      before: function before(xhr, editor, files) {
+        // 视频上传之前触发
+
+        // 如果返回的结果是 {prevent: true, msg: 'xxxx'} 则表示用户放弃上传
+        // return {
+        //     prevent: true,
+        //     msg: '放弃上传'
+        // }
+      },
+      success: function success(xhr, editor, result) {
+        // 视频上传并返回结果，视频插入成功之后触发
+      },
+      fail: function fail(xhr, editor, result) {
+        // 视频上传并返回结果，但视频插入错误时触发
+      },
+      error: function error(xhr, editor) {
+        // 视频上传出错时触发
+      },
+      timeout: function timeout(xhr, editor) {
+        // 视频上传超时时触发
+      }
+    }
   };
 
   /*
@@ -4533,7 +4592,7 @@
         }
       }
 
-      editor.cmd.do('insertHTML', '<iframe src="' + link + '" style="width:300px;height:200px" frameborder="0"  webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>');
+      editor.cmd.do('insertHTML', '<iframe src="' + link + '" id="video-iframe" frameborder="0"></iframe>');
     },
 
     //上传视频--------------------------------------------------------------------
