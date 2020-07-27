@@ -79,5 +79,5 @@
     "win-example": "node ./example/server/index.js"
   },
   "title": "zhangEditor",
-  "version": "1.0.4"
+  "version": "1.0.5"
 }
