@@ -2831,7 +2831,7 @@
         }, // first tab end
         {
           // 标题
-          title: '插入视频',
+          title: '网络视频',
           // 模板
           tpl: '<div><input id="' + textValId + '" type="text" class="block" placeholder="\u683C\u5F0F\u5982\uFF1A<iframe src=... ></iframe>"/><div class="w-e-button-container"><button id="' + btnId + '" class="right">\u63D2\u5165</button></div></div>',
           // 事件绑定
@@ -2876,11 +2876,11 @@
       this.panel = panel;
     },
 
-    // // 插入视频
-    // _insert: function _insert(val) {
-    //   var editor = this.editor;
-    //   editor.cmd.do('insertHTML', val + '<p><br></p>');
-    // }
+    // 插入视频
+    _insert: function _insert(val) {
+      var editor = this.editor;
+      editor.cmd.do('insertHTML', val + '<p><br></p>');
+    }
   };
 
   /*
