@@ -4711,7 +4711,7 @@
 
         // 定义 xhr
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://up-z2.qiniup.com/');
+        xhr.open('POST', uploadVideoServer);
 
         // 设置超时
         xhr.timeout = timeout;
