@@ -4592,7 +4592,7 @@
         }
       }
 
-      editor.cmd.do('insertHTML', '<iframe src="' + link + '" id="video-iframe" frameborder="0"></iframe>');
+      editor.cmd.do('insertHTML', '<iframe src="' + link + '" class="video-iframe" frameborder="0"></iframe>');
     },
 
     //上传视频--------------------------------------------------------------------
