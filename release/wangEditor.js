@@ -4343,6 +4343,7 @@
       // ------------------------------ 获取配置信息 ------------------------------
       var editor = this.editor;
       var config = editor.config;
+      var uploadToken = config.uploadToken;
       var uploadImgServer = config.uploadImgServer;
       var uploadImgShowBase64 = config.uploadImgShowBase64;
 
@@ -4416,7 +4417,7 @@
       var formdata = new FormData();
       arrForEach(resultFiles, function (file) {
         var name = uploadFileName || file.name;
-        formdata.append(name, file);
+        formdata.append('file', file);
       });
 
       // ------------------------------ 上传图片 ------------------------------
@@ -4551,6 +4552,7 @@
         // 跨域传 cookie
         xhr.withCredentials = withCredentials;
 
+        formdata.append('token', uploadToken);
         // 发送请求
         xhr.send(formdata);
 
