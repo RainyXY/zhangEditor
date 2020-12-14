@@ -7,6 +7,12 @@
 zhangEditor --- 修改了wangEditor的视频上传功能
 **wangEditor** —— 轻量级 web 富文本编辑器，配置方便，使用简单。支持 IE10+ 浏览器。
 
+改造文档 [https://blog.csdn.net/Rainy_X/article/details/107638720](https://blog.csdn.net/Rainy_X/article/details/107638720)
+
+使用`npm`下载： `npm install zhangeditor`
+
+## 原wangEditor文档
+
 - 官网：[www.wangEditor.com](http://www.wangeditor.com/)
 - 文档：[www.kancloud.cn/wangfupeng/wangeditor3/332599](http://www.kancloud.cn/wangfupeng/wangeditor3/332599)
 - 源码：[github.com/wangfupeng1988/wangEditor](https://github.com/wangfupeng1988/wangEditor) （欢迎 star）
@@ -19,7 +25,7 @@ zhangEditor --- 修改了wangEditor的视频上传功能
 ## 下载
 
 - 直接下载：[https://github.com/wangfupeng1988/wangEditor/releases](https://github.com/wangfupeng1988/wangEditor/releases)
-- 使用`npm`下载：`npm install wangeditor` （注意 `wangeditor` 全部是**小写字母**）
+- 使用`npm`下载： `npm install wangeditor` （注意 `wangeditor` 全部是**小写字母**）
 - 使用`bower`下载：`bower install wangEditor` （前提保证电脑已安装了`bower`）
 - 使用CDN：[//unpkg.com/wangeditor/release/wangEditor.min.js](https://unpkg.com/wangeditor/release/wangEditor.min.js)
 
@@ -27,7 +33,7 @@ zhangEditor --- 修改了wangEditor的视频上传功能
 ## 使用
 
 ```javascript
-var E = window.zhangEditor
+var E = window.wangEditor
 var editor = new E('#div1')
 editor.create()
 ```
