@@ -27,7 +27,7 @@ zhangEditor --- 修改了wangEditor的视频上传功能
 ## 使用
 
 ```javascript
-var E = window.wangEditor
+var E = window.zhangEditor
 var editor = new E('#div1')
 editor.create()
 ```
@@ -46,7 +46,7 @@ editor.create()
 
 ### QQ 群
 
-以下 QQ 群欢迎加入交流问题（可能有些群已经满员）
+以下 QQ 群欢迎加入交流问题（可能有些群已经满员原wangEditor）
 
 - 164999061
 - 281268320
